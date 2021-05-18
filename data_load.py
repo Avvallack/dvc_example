@@ -22,8 +22,7 @@ if __name__ == '__main__':
     for col in ['CO(GT)', 'C6H6(GT)', 'T', 'RH', 'AH']:
         df[col] = df[col].apply(bring_to_float)
     
-    for col in df.columns:
-        df[col] = df[col].apply(replace_nan)
+   
 
     df.dropna(inplace=True)
 
