@@ -1,5 +1,4 @@
 stages:
-
   data_prep:
     cmd: python3 data_load.py
     deps:
