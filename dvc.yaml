@@ -1,13 +1,10 @@
 stages:
-  data_load:
-    cmd: dvc pull AirQuality.csv
-    outs: AirQuality.csv
 
   data_prep:
     cmd: python3 data_load.py
     deps:
     - data_load.py
-    - AirQuality.csv
+    - AirQualityUCI.csv
     outs:
     - prepared_data.csv
   prepare_and_train:
